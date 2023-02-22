@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+
+    /* for Webkit browsers */
+    #scroll-part::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    #scroll-part::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #C6CBD1;
+    }
+
+    /* for Moz browser */
+    #scroll-part{
+        overflow-y: scroll;
+        scrollbar-color: #C6CBD1 transparent ;
+        scrollbar-width: thin;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    /* Home page's Progress part's background */
+    #progress-cta {
+        background: url('../images/home/upgrade-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #greeting-to-user {
+        background: url('../images/ecommerce/gretting-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Ecommerce page's  Gretting part's background */
+
+    .animate-bell {
+        animation: animateBell 0.7s infinite;
+        -webkit-animation: animateBell 0.7s infinite;
+    }
+
+    @keyframes animateBell {
+
+            0% {
+              transform: rotate(-3deg);
+              -webkit-transform: rotate(-3deg);
+              -moz-transform: rotate(-3deg);
+              -ms-transform: rotate(-3deg);
+              -o-transform: rotate(-3deg);
+}
+            10%, 20%, 30% {
+              transform: rotate(3deg);
+              -webkit-transform: rotate(3deg);
+              -moz-transform: rotate(3deg);
+              -ms-transform: rotate(3deg);
+              -o-transform: rotate(3deg);
+}
+            40%, 50%, 60% {
+              transform: rotate(-3deg);
+              -webkit-transform: rotate(-3deg);
+              -moz-transform: rotate(-3deg);
+              -ms-transform: rotate(-3deg);
+              -o-transform: rotate(-3deg);
+}
+            70%, 80%, 90% {
+              transform: rotate(3deg);
+              -webkit-transform: rotate(3deg);
+              -moz-transform: rotate(3deg);
+              -ms-transform: rotate(3deg);
+              -o-transform: rotate(3deg);
+}
+          100% {
+              transform: rotate(-3deg);
+              -webkit-transform: rotate(-3deg);
+              -moz-transform: rotate(-3deg);
+              -ms-transform: rotate(-3deg);
+              -o-transform: rotate(-3deg);
+}
+    }
+
+    .custom-dropshadow {
+        filter: drop-shadow(0px 2px 4px rgba(40,41,61,.04)) drop-shadow(0px 8px 16px rgba(96,97,112,.16));
+        -webkit-filter: drop-shadow(0px 2px 4px rgba(40,41,61,.04)) drop-shadow(0px 8px 16px rgba(96,97,112,.16));
+    } 
+}
+
